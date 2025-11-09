@@ -113,6 +113,65 @@ Data integration is the process of merging multiple dataset or datasources
 
 Obtaining a reduced form of the dataset in a way that data is much smaller in volume but still produces the same analytical result 
 
+### Compression 
 If compression of data is done but restoring the data doesnt lose any information the data reduction is called lossless
 
+### PCA
 PCA, principle component analysis, here the original corelated variables are reduced to smaller set of variables called principal components 
+
+### Attribute Subset selection techniques 
+
+The data present in the dataset might be redundant or reccuring and may not be of compete use which may cause to drop quality of the model trained or discovering patterns of poor quality, this can also result in slowing down of the mining process 
+
+The goal of the attribute subset selection is to find a new reduced set of attributes that resulting probablity distrubution is close to the possible original using all attributes.
+
+1.  Stepwise forward selection 
+		 procedure starts with empty set of attributes and the best of the original attributes is added one by one at each step.
+2. Stepwise backward elimination
+		Procedure starts with a full set of attributes  and at each step  it removes the worst attribute in the set
+3. Combination of forward selection and backward elimination
+		Both the stepwise  forward selection and backward elimination can be performed together in a iteration, best atribute added and the worst attribute removed
+4. Decision tree induction 
+		Each node in the tree which is not the leaf node symbolises an attribute and each branch symbolizes the outcome and  external leaf shows the class prediction 
+		Thereby the tree helps to find the right attributes and the attributes that doesnt come on the tree is assumed to be irrelevant 
+
+### Numerosity Reduction techniques 
+
+1. Histogram
+		Binning in done in histogram 
+2. Clustering
+	1. Similar elements are placed together in the same group and dissimlar ones are in their group
+	2. Centroid distance is a measure of cluster quality, distance bw points and the midpoint of the cluster is the centroid distance. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
