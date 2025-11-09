@@ -113,4 +113,6 @@ Data integration is the process of merging multiple dataset or datasources
 
 Obtaining a reduced form of the dataset in a way that data is much smaller in volume but still produces the same analytical result 
 
-If compression of data is done but restoring the data doesnt 
+If compression of data is done but restoring the data doesnt lose any information the data reduction is called lossless
+
+PCA, principle component analysis, here the original corelated variables are reduced to smaller set of variables called principal components 
