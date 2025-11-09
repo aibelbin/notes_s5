@@ -84,5 +84,33 @@ Data preprocessing is the process of transforming data into an more understandab
 ### Ways to tackle Noisy data 
 
 1. Binning 
+		Convert the dataset it equisized bins to perform median, boundary etc binning to smoothen the noisy data
 2. Regression 
+		This is done by fitting the data value to a function thereby reducing the variations that may cause noise, this helps to make the data smooth 
+		this can be multiple or single linear function
 3. Outlier analysis 
+		Outliers analysis is done by first splitting the dataset into clusters and the points that are too far from any of its nearby cluster will be considered as a outlier which can be removed or replaced to reduce noise in the dataset 
+			1. Univariate outlier  (Single feature)
+			2. Multivaritate outlier (Multi feature) 
+			3. Point outlier  (a single point that lies far from the rest)
+			4. Contextual outlier (can be noise in data such as punctuation symbols  when realising text analysis etc)
+			5. Collective Outlier (novalities in data like a new phenomenon or underlying trend)
+
+Solving discrepency is the first step of the data cleaning process, it may be caused due to human error or error with the method of collection of the dataset etc 
+
+
+## Data Integration 
+
+Data integration is the process of merging multiple dataset or datasources 
+
+1. Entity Identification Problem (matching schema)
+2. Redundancy  and correlation analysis (Data is redundant if it can be derived from another source, chi squared test can be used for this, perform correlation analysis to reduce redundancy)
+3. Tuple duplication (when two data rows of the dataset is entirely the same, its a duplicate tuple)
+4. Data Value conflict detection and resolution 
+
+
+## Data Reduction 
+
+Obtaining a reduced form of the dataset in a way that data is much smaller in volume but still produces the same analytical result 
+
+If compression of data is done but restoring the data doesnt 
