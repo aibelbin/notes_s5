@@ -145,6 +145,18 @@ The goal of the attribute subset selection is to find a new reduced set of attri
 
 
 
+## Data Transformation 
+
+A function that maps the entire set of values of a given attribute to a new set replacement values such that old value can be identified with one of the new values 
+
+## Data Visualization 
+
+1. Bar graph 
+2. Line Graph 
+3. Scatter plot 
+4. Gantt Chart 
+
+
 
 
 

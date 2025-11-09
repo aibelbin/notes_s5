@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f85d3ff32966e1fc",
+        "id": "d7b5b77a77642939",
         "type": "tabs",
         "children": [
           {
-            "id": "1330a2c00541988f",
+            "id": "bd129cdc74b330eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,10 +169,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "1330a2c00541988f",
+  "active": "bd129cdc74b330eb",
   "lastOpenFiles": [
-    "Data Science/MOD 1.md",
+    "Untitled 1.base",
+    "Untitled.base",
     "Data Science/MOD 2.md",
+    "Data Science/MOD 1.md",
     "Pasted image 20251108152846.png",
     "Data Science",
     "Computer Networks/Mod 3.md",
