@@ -112,3 +112,22 @@ world,
 
 
 
+
+**outliers** are anomalies in the given dataset 
+
+reducing the number of attributes without significant loss in the perfomance of the model is known as **feature selection**
+
+**Sampling** is a process of selecting a subset of records as a representation of original dataset used for modelling
+
+
+## Modelling 
+
+the data is split to training and test data 
+
+A model should not memorize and output the same values that are in the training
+records. **overfitting**
+An over fitted model will underperform on real unlabelled new data.
+
+Prediction error is calculated by cross checking the predicted values with the actual values 
+
+
