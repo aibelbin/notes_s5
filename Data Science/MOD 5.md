@@ -19,3 +19,33 @@ Bootstrapping means random sampling with replacement, this randomly selection sa
 ## Confusion Matrix
 
 Confusion matrix is table drawn from a dataset where true values are known, it is used to evaluate the performance of  model 
+
+
+## Ensemble learning 
+
+The type of machine learning where multiple weak models are put together to get a perfomative model is known as ensemble learning 
+
+### Multiclass classification problem 
+
+Let there be n class labels C1 , C2 , . . . , Cn . Let x be a test instance and let there be L base
+learners. Here also, each of the base learners will assign a class label to x and when a class
+label is assigned a label, the label gets a vote. In the voting scheme, the class label which gets
+the maximum number of votes is assigned to x.
+
+
+### Regression 
+
+#### Voting 
+Combine the prediction from multiple models 
+
+#### Bagging 
+
+This is the type of model training where the model is trained on different samples of the same dataset, this is using bootstrapping, different subsets of the same dataset
+
+#### Boosting 
+
+this is the type of learning where the new model focuses on the errors of the previous model and focussing on correcting the previous errors 
+
+#### Random forest 
+
+A group of decision trees are put together and their outputs are put together to get a final output, this is how random forest works The subset for each decision tree is by creating samples of data with replacement. (bootstrapping)
