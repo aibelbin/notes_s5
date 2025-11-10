@@ -36,13 +36,16 @@ Pruning can be done on trees to reduce overfitting, pruning is the process of re
 
 ## Naive Bayers  Algorithm 
 
-The naive bayers algorithm is based on the following assumptions 
+In naive bayes we can predict the class membership probabilities such that  the probability tht a given item belongs to a particular class 
 
+It runs on the following assumptions 
 1.  all features are independent and unrelated to each other presence or absence of a feature does not affect the presence or absence of another feature 
-2. The data has class conditional independence, the  events are independent as long as they are conditioned on the same class 
+2.  Class conditional independence ie, If a class is known, knowing one feature wont give the ability to find another feature 
 
 
+## Bayesian Belief Network 
 
+It is a probabilistic graphical model that represents conditional dependencies between random variables. they assume that, given a class label the value of the attributes are conditionally independent
 ## Types of learners 
 
 ### Lazy learners (Instance based learners)
@@ -91,3 +94,154 @@ Its an algorithm for the classification for linear and non linear data, in this 
 **Support vectors** are the closest lying data points from the hyperplane 
 
 Sometimes the data isnt always linearly separable, in this case kernels are used to map them to linearly separable data to map them to a higher dimension 
+
+## Back Propogation 
+#### Training Algorithm Steps
+
+---
+
+**Step 1:**  
+Initialize weights and learning rates.
+
+---
+
+**Step 2:**  
+Calculate net input to each hidden unit \( z_j \) using:
+
+$$
+Z_{inj} = Z_{0j} + \sum_{i=1}^{n} x_i V_{ij}
+$$
+
+---
+
+**Step 3:**  
+Calculate output from hidden layer by applying activation function over \( Z_{inj} \):
+
+$$
+Z_j = f(Z_{inj})
+$$
+
+---
+
+**Step 4:**  
+For each output unit \( y_k \), \( k = 1, 2, \ldots, m \):
+
+$$
+Y_{ink} = W_{0k} + \sum_{j=1}^{l} z_j W_{jk}
+$$
+
+---
+
+**Step 5:**  
+Apply activation function to compute output signal:
+
+$$
+Y_k = f(Y_{ink})
+$$
+
+---
+
+**Step 6:**  
+For each output unit \( y_k \), compute the error correction using the formula:
+
+### For output layers:
+$$
+\delta_k = f'(Y_{ink}) (t_k - y_k)
+$$
+
+or equivalently,
+
+$$
+\delta_k = f(Y_{ink}) (1 - f(Y_{ink})) (t_k - y_k)
+$$
+
+### For hidden layers:
+$$
+\delta_j = f(Z_{inj}) (1 - f(Z_{inj})) \sum_k \delta_k W_{jk}
+$$
+
+
+once the output is calculated, it is checked and backprogration is done to correct the weights
+
+
+Back propagation is the **essence of neural network training**.  
+It is the method of **fine-tuning the weights** of a neural network based on the **error obtained in the previous epoch**.
+
+Proper tuning of the weights allows the model to:
+- Reduce error rates,
+- Make the model more reliable,
+- And increase its generalization.
+
+The algorithm is used to effectively train a neural network through a method called **"chain rule"**.  
+In simple terms, after each forward pass through the network, back propagation performs a **backward pass** in which the model parameters (weights and biases) are **adjusted**.
+
+---
+
+### Steps
+ 
+Initially, the **weights are assigned at random**.  
+Then the algorithm iterates through many cycles of two processes until a stopping criterion is reached.  
+Each cycle is known as an **epoch**.
+
+Each **epoch** includes:
+
+---
+
+###  1. Forward Phase
+
+In this phase, the **input for the training instances** are fed into the neural network.  
+This results in a **forward cascade of computations** across the layers using the current set of weights.
+
+The final predicted output can then be compared to the **target output** of the training instance, and the **derivative of the loss function** with respect to the output is computed.
+
+---
+
+###  2. Backward Phase (Backpropagation Step)
+
+The errors from the output layer are **propagated backward** through the network to adjust the weights.
+
+Each neuron’s weight update depends on:
+- The derivative of the loss function,
+- The neuron’s activation output,
+- And the learning rate.
+
+The goal is to minimize the **overall loss (error)** by updating weights in the direction of steepest descent (negative gradient).
+
+---
+
+###  3. Weight Update Rule
+
+Weights are updated using the **gradient descent rule**:
+
+$$
+W_{ij}(t+1) = W_{ij}(t) + \eta \, \delta_j \, x_i
+$$
+
+where:
+- \( \eta \) = learning rate  
+- \( \delta_j \) = error term for neuron \( j \)  
+- \( x_i \) = input to neuron \( j \)
+
+---
+
+###  4. Epoch and Convergence
+
+This **forward–backward cycle** is repeated for multiple epochs until:
+- The total error is below a threshold, or  
+- A maximum number of epochs is reached.
+
+At convergence, the network’s weights are optimized to produce minimal output error on the training data.
+
+---
+
+### Summary
+
+| Term                  | Meaning                                             |
+| --------------------- | --------------------------------------------------- |
+| **Epoch**             | One complete pass of forward + backward propagation |
+| **Forward Phase**     | Compute output using current weights                |
+| **Backward Phase**    | Compute error and update weights                    |
+| **Learning Rate (η)** | Controls how fast the weights are updated           |
+| **Loss Function**     | Measures error between predicted and actual outputs |
+
+---
