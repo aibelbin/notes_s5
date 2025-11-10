@@ -12,15 +12,11 @@ The quality of the cluster depends on the algorithm, distance function and the a
 
 In K means algorithms, the cluster centre is represented as the mean of all the objects in the cluster 
 
-### Steps 
-
 
 ## K medaloids algorithm 
 
 This is similar to k means but instead of choosing the mean as the centroid of the cluster, datapoint is choosen as the centroid
 
-
-### Steps 
 
 ## Hierarchical clustering 
 
@@ -47,3 +43,22 @@ It is an unsupervised learning technique used to learn the shopping behavior or 
 
 The rules that support both minimum support threshold and minimum confidence threshold are called strong association rules 
 
+### Apriori Algorithm 
+
+Support and Confidence 
+
+**Support** indicates how frequently an option appears in the dataset
+ $$
+\text{Support}(A \Rightarrow B) = \frac{\text{Number of transactions containing both A and B}}{\text{Total number of transactions}}
+$$
+
+
+**Confidence** is a measure of how frequently the rule has found to be true 
+
+
+$$
+\text{Confidence}(A \Rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)} = P(B|A)
+$$
+### Corealation analysis 
+
+Correlation analysis is the study of strength and direction of linear relationship between two variables 

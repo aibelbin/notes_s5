@@ -1,4 +1,13 @@
 
+
+## Classification 
+
+It is the process of categorising inputs or datapoints to pre determined classes, output type is discrete
+
+## Regression
+
+It is the process of predicting continuous numerical values, Estimate a real value quantity
+
 ## Decision Trees 
 
 Decision tree is a type of supervised learning algorithm used for classification and regression type of problem to take decision based on mapped out possibilities and their outcomes 
@@ -92,7 +101,7 @@ Its an algorithm for the classification for linear and non linear data, in this 
 **Margin** is the distance between the hyperplane and the closest point from each class 
 
 **Support vectors** are the closest lying data points from the hyperplane 
-
+	
 Sometimes the data isnt always linearly separable, in this case kernels are used to map them to linearly separable data to map them to a higher dimension 
 
 ## Back Propogation 
@@ -161,7 +170,7 @@ $$
 $$
 
 
-once the output is calculated, it is checked and backprogration is done to correct the weights
+once the output is calculated, it is checked and back progration is done to correct the weights
 
 
 Back propagation is the **essence of neural network training**.  

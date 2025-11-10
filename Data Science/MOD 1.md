@@ -131,3 +131,10 @@ An over fitted model will underperform on real unlabelled new data.
 Prediction error is calculated by cross checking the predicted values with the actual values 
 
 
+## Data Scientist tools and skills
+
+A data scientist tools softwares like python, R programming language and other tools like spark, hadloop, softwares like excel or tally to segregate and filter out data, also good knowledge in jyupiter and r studio also having knowledge in the working of softwares like matlab is important for a data scientist 
+
+There are also frameworks like pytorch numpy sklearn, and some other tools for visualisation like matplotlib, some other data storage tools include mysql, postgress, lanchain and chromdb, mongodb etc. 
+
+

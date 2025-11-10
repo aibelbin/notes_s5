@@ -71,8 +71,8 @@ Data preprocessing is the process of transforming data into an more understandab
 
 1. Data cleaning 
 2. Data Integration
-3. Data reduction 
-4. Data Transformation 
+3. Data Transformation 
+4. Data Reduction 
 5. Data Discretization 
 
 
@@ -106,12 +106,19 @@ Data integration is the process of merging multiple dataset or datasources
 1. Entity Identification Problem (matching schema)
 2. Redundancy  and correlation analysis (Data is redundant if it can be derived from another source, chi squared test can be used for this, perform correlation analysis to reduce redundancy)
 3. Tuple duplication (when two data rows of the dataset is entirely the same, its a duplicate tuple)
-4. Data Value conflict detection and resolution 
+4. Data Value conflict detection and resolution, date formats etc
+
+
+## Data Transformation 
+
+A function that maps the entire set of values of a given attribute to a new set replacement values such that old value can be identified with one of the new values 
 
 
 ## Data Reduction 
 
 Obtaining a reduced form of the dataset in a way that data is much smaller in volume but still produces the same analytical result 
+
+
 
 ### Compression 
 If compression of data is done but restoring the data doesnt lose any information the data reduction is called lossless
@@ -125,8 +132,8 @@ The data present in the dataset might be redundant or reccuring and may not be o
 
 The goal of the attribute subset selection is to find a new reduced set of attributes that resulting probablity distrubution is close to the possible original using all attributes.
 
-1.  Stepwise forward selection 
-		 procedure starts with empty set of attributes and the best of the original attributes is added one by one at each step.
+1. Stepwise forward selection 
+		procedure starts with empty set of attributes and the best of the original attributes is added one by one at each step.
 2. Stepwise backward elimination
 		Procedure starts with a full set of attributes  and at each step  it removes the worst attribute in the set
 3. Combination of forward selection and backward elimination
@@ -142,12 +149,6 @@ The goal of the attribute subset selection is to find a new reduced set of attri
 2. Clustering
 	1. Similar elements are placed together in the same group and dissimlar ones are in their group
 	2. Centroid distance is a measure of cluster quality, distance bw points and the midpoint of the cluster is the centroid distance. 
-
-
-
-## Data Transformation 
-
-A function that maps the entire set of values of a given attribute to a new set replacement values such that old value can be identified with one of the new values 
 
 ## Data Visualization 
 
