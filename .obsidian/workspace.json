@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Science/MOD 5.md",
+                "file": "Data Science/MOD 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MOD 5"
+              "title": "MOD 3"
             }
           }
         ]
@@ -171,9 +171,10 @@
   },
   "active": "3dbc2db44d83d920",
   "lastOpenFiles": [
-    "Pasted image 20251108152846.png",
     "Data Science/MOD 5.md",
     "Data Science/MOD 2.md",
+    "Data Science/MOD 3.md",
+    "Pasted image 20251108152846.png",
     "Untitled 1.base",
     "Untitled.base",
     "Data Science/MOD 1.md",
