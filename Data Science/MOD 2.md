@@ -119,10 +119,18 @@ A function that maps the entire set of values of a given attribute to a new set 
 Obtaining a reduced form of the dataset in a way that data is much smaller in volume but still produces the same analytical result 
 
 
+### Data Discretization 
+This technique involves converting continuous data
+into discrete data by partitioning the range of possible values into
+intervals or bins.
 
 ### Compression 
 If compression of data is done but restoring the data doesnt lose any information the data reduction is called lossless
-
+Compression can be of two types 
+1. Lossless
+	in lossless compression the data is compressed preserving every bit of data such that when the compression is reverted, every part of the data is saved and is not lost
+2. Lossy
+	in lossy compression, the less important part of the data is made to permanently be removed so as to improve the storage efficiency. 
 ### PCA
 PCA, principle component analysis, here the original corelated variables are reduced to smaller set of variables called principal components 
 
