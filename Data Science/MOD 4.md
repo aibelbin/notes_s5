@@ -14,10 +14,71 @@ The quality of the cluster depends on the algorithm, distance function and the a
 
 In K means algorithms, the cluster centre is represented as the mean of all the objects in the cluster 
 
+#### Algorithm 
+
+1. **Input:**  
+   - Number of clusters, `k`
+   - Dataset, `D = {x₁, x₂, ..., xₙ}`
+
+2. **Initialize:**  
+   Randomly select `k` points from the dataset as **initial centroids**.
+
+3. **Assignment Step:**  
+   For each data point `xᵢ`, assign it to the cluster whose centroid is closest:
+   $$
+   C_j = \{ xᵢ : ||xᵢ - μ_j||^2 \le ||xᵢ - μ_l||^2 \; \forall l, 1 \le l \le k \}
+   $$
+
+4. **Update Step:**  
+   Recalculate the centroid (mean) of each cluster:
+   $$
+   μ_j = \frac{1}{|C_j|} \sum_{xᵢ \in C_j} xᵢ
+   $$
+
+5. **Repeat:**  
+   Continue **Assignment** and **Update** steps until:
+   - Centroids do not change, or
+   - The change is below a threshold.
+
+6. **Output:**  
+   - Final cluster centroids  
+   - Clustered dataset
+
 
 ### K medaloids algorithm 
 
 This is similar to k means but instead of choosing the mean as the centroid of the cluster, datapoint is choosen as the centroid
+
+#### Algorithm 
+
+
+1. **Input:**  
+   - Number of clusters, `k`  
+   - Dataset, `D = {x₁, x₂, ..., xₙ}`
+
+2. **Initialize:**  
+   Randomly select `k` data points as the **initial medoids**.
+
+3. **Assignment Step:**  
+   Assign each data point to the cluster with the **nearest medoid**:
+   $$
+   C_j = \{ xᵢ : d(xᵢ, m_j) \le d(xᵢ, m_l) \; \forall l, 1 \le l \le k \}
+   $$
+
+4. **Update Step:**  
+   For each cluster, choose the point that minimizes the total distance to all other points in the cluster as the **new medoid**:
+   $$
+   m_j = \arg \min_{x_p \in C_j} \sum_{x_q \in C_j} d(x_p, x_q)
+   $$
+
+5. **Repeat:**  
+   - Reassign points to nearest medoids
+   - Recalculate medoids  
+   Until there is **no change** in medoids.
+
+6. **Output:**  
+   - Final set of medoids  
+   - Clustered dataset
 
 
 ## Hierarchical clustering 
@@ -105,7 +166,7 @@ that happen often enough.
 
 •The Apriori algorithm uses a helpful rule to save time. This rule says: if a
 group of items does not appear often enough then any larger group that
-incl2 udes these items will also not appear often.
+includes these items will also not appear often.
 •Because of this, the algorithm does not check those larger groups. This way
 it avoids wasting time looking at groups that won’t be important make the
 whole process faster.4. Generating Association Rules
