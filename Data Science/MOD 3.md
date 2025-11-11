@@ -6,19 +6,28 @@ It is the process of categorising inputs or datapoints to pre determined classes
 
 ## Regression
 
-It is the process of predicting continuous numerical values, Estimate a real value quantity
+Regression is a **supervised learning technique** because it uses **labeled training data** to learn a mapping between input variables and a **continuous output variable**, allowing it to predict numeric outcomes for new inputs.
 
+---
 ## Decision Trees 
 
 Decision tree is a type of supervised learning algorithm used for classification and regression type of problem to take decision based on mapped out possibilities and their outcomes 
 Its a tree like structure and contains different leaves and nodes, the top most node is known as root node which contains the most significant feature, represents the entire dataset from there the nodes split differently based on features 
 
+
+### **How Decision Tree Induction Works**
+
+Decision tree induction works by **recursively partitioning the dataset** based on the attribute that gives the **maximum Information Gain (IG)** — that is, the attribute that most effectively separates the data into distinct classes.
 **Feature selection methods** decide which node has to be the root node at each level of the decision tree, this method of selection increases the accuracy and performance of the tree
 	Information gain 
 	Gini Index 
 
-**Entropy**
-It is the measure of impurity in the dataset, entropy values can range from 0 to 1 
+Information Gain is based on the concept of **Entropy** (from information theory).
+
+- **Entropy** measures the impurity or randomness in data.
+    
+- **Information Gain** measures the **reduction in entropy** achieved by splitting on a particular attribute.
+
 
 #### Pruning 
 Pruning can be done on trees to reduce overfitting, pruning is the process of removing branches of the tree that has very less predictive power.
@@ -42,7 +51,7 @@ Pruning can be done on trees to reduce overfitting, pruning is the process of re
 
 **Information gain** is the measure of reduction in entropy achieved by splitting a specific feature 
 
-
+---
 ## Naive Bayers  Algorithm 
 
 In naive bayes we can predict the class membership probabilities such that  the probability tht a given item belongs to a particular class 
@@ -62,7 +71,42 @@ Each nodes probablility depends on its parent nodes. They apply the probabilty t
 $$
 P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}
 $$
+There also contains a CPT, Conditional Probability table which shows the effect of parent nodes on the child nodes 
 
+**Classification process:**
+
+1. The network is constructed based on known dependencies among variables.
+    
+2. Each node’s probability is computed using Bayes’ theorem.
+    
+3. When a new instance is given, evidence (known attribute values) is entered into the network.
+    
+4. Using inference, the posterior probability of each class is computed.
+    
+5. The class with the highest posterior probability is assigned to the instance
+
+
+
+## Rule based Classifier 
+
+
+A **Rule-Based Classifier** is a classification model that uses a set of **IF–THEN rules** to make decisions or predictions.  
+Each rule defines a relationship between feature values (conditions) and a class label (conclusion).
+
+
+**Classification process:**
+
+1. A set of rules is generated from the training data (manually or using algorithms like ID3, C4.5, or RIPPER).
+    
+2. Each rule is of the form:  
+    `IF <condition> THEN <class>`
+    
+3. For a new data instance, the classifier checks which rules’ conditions are satisfied.
+    
+4. If multiple rules match, the classifier uses criteria such as rule order, confidence, or voting to select the best rule.
+    
+5. The class label in the selected rule’s conclusion is assigned to the instance.
+---
 ## Types of learners 
 
 ### Lazy learners (Instance based learners)
@@ -85,6 +129,8 @@ tuples to classify.
 
 This is the type of algorithm which compares the test data with the training data and tries to find the point in the training data that is closest to the test data, this is how knn algorithm works, 
 closesness is measured in measure of euclidean distance 
+
+KNN is effective with small dataset though it gets slower when the dataset is large
 
 The K-Nearest Neighbors (KNN) algorithm is known as a lazy learner because
 it does not build an internal model during the training phase. Instead, it simply

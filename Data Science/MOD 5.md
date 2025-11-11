@@ -108,7 +108,7 @@ the maximum number of votes is assigned to x.
 ### Regression 
 
 #### Voting 
-Combine the prediction from multiple models 
+Combine the prediction from multiple models and the outputs of these models are combined together with voting to get a more accurate combined output
 
 #### Bagging 
 

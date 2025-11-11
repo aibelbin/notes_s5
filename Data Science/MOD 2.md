@@ -112,6 +112,9 @@ Data integration is the process of merging multiple dataset or datasources
 ## Data Transformation 
 
 A function that maps the entire set of values of a given attribute to a new set replacement values such that old value can be identified with one of the new values 
+**Data Transformation** is the process of **converting data into a suitable format or structure** for analysis or model training.
+
+
 
 
 ## Data Reduction 
@@ -159,6 +162,9 @@ The goal of the attribute subset selection is to find a new reduced set of attri
 	2. Centroid distance is a measure of cluster quality, distance bw points and the midpoint of the cluster is the centroid distance. 
 
 ## Data Visualization 
+
+
+**Data Visualization** is the process of **representing data in graphical or pictorial form** so that patterns, trends, and insights can be easily understood.
 
 1. Bar graph 
 2. Line Graph 
