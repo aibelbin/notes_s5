@@ -51,10 +51,18 @@ It runs on the following assumptions
 1.  all features are independent and unrelated to each other presence or absence of a feature does not affect the presence or absence of another feature 
 2.  Class conditional independence ie, If a class is known, knowing one feature wont give the ability to find another feature 
 
-
 ## Bayesian Belief Network 
 
 It is a probabilistic graphical model that represents conditional dependencies between random variables. they assume that, given a class label the value of the attributes are conditionally independent
+
+In bayesian belief network there contains multiple nodes and its dependencies are shown as edges. 
+
+Each nodes probablility depends on its parent nodes. They apply the probabilty theory for prediction outputs in this space 
+
+$$
+P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}
+$$
+
 ## Types of learners 
 
 ### Lazy learners (Instance based learners)
@@ -78,6 +86,33 @@ tuples to classify.
 This is the type of algorithm which compares the test data with the training data and tries to find the point in the training data that is closest to the test data, this is how knn algorithm works, 
 closesness is measured in measure of euclidean distance 
 
+The K-Nearest Neighbors (KNN) algorithm is known as a lazy learner because
+it does not build an internal model during the training phase. Instead, it simply
+stores the entire training dataset and defers any processing until it needs to
+make a prediction. Here’s how K-NN works:
+
+•Training Phase: K-NN doesn’t actually “train” in the traditional sense—
+it just stores the training data.
+
+•Classification Phase: When new data needs to be classified, K-NN finds
+the K closest points in the training data to the new point and assigns it a
+label based on the majority label among those nearest neighbors.
+Lazy learning algorithms like K-NN are useful when the data is noisy or has
+a complex structure. However, K-NN can be slow for large datasets because it
+has to search through all the data points each time it makes a prediction. Unlike
+eager learning algorithms, which build a model during training, lazy learning
+algorithms simply store the data, making their training phase extremely quick
+since no processing or learning happens a
+
+1. Select the number of neighbors (K): The user specifies how many
+neighbors (K) should be considered when making a prediction.
+2. Calculate distances: For each new data point, KNN calculates the distance
+between that point and every point in the training dataset.
+3. Identify nearest neighbors: The algorithm identifies the K closest points
+(neighbors).
+4. Make a prediction: For classification tasks, KNN assigns the most
+common class among the nearest neighbors to the new data point. For
+regression tasks, it averages their values.
 
 the **partial distance method**, we compute
 the distance based on a subset of the n attributes. If this distance exceeds a threshold,
@@ -101,6 +136,12 @@ Its an algorithm for the classification for linear and non linear data, in this 
 **Margin** is the distance between the hyperplane and the closest point from each class 
 
 **Support vectors** are the closest lying data points from the hyperplane 
+
+**Kernel**: A function that maps data to a higher-dimensional space enabling
+SVM to handle non-linearly separable data.
+
+**Hyperplane**: A decision boundary separating different classes in feature
+space and is represented by the equation wx + b = 0 in linear classification.
 	
 Sometimes the data isnt always linearly separable, in this case kernels are used to map them to linearly separable data to map them to a higher dimension 
 
