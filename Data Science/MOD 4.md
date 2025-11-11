@@ -8,12 +8,14 @@ The set of clusters resulting from a cluster analysis is called a clustering
 The quality of the cluster depends on the algorithm, distance function and the application 
 
 
-## K means algorithm 
+## Partition Clustering
+
+### K means algorithm 
 
 In K means algorithms, the cluster centre is represented as the mean of all the objects in the cluster 
 
 
-## K medaloids algorithm 
+### K medaloids algorithm 
 
 This is similar to k means but instead of choosing the mean as the centroid of the cluster, datapoint is choosen as the centroid
 
@@ -36,7 +38,20 @@ Here the clustering is based on a bottom down strategy, here all the objects are
 
 If an algorithm uses minimum distance it is called nearest neighbor clustering algorithm however if it uses maximum distance, its called farthest neighbor clustering algorithm
 
+## DB Scan (Density based clustering)
 
+Density based clustering is to create clusters based on the density or population of similar points in an area. 
+
+In density based clustering the algoritm takes two values $\epsilon$ and MinPts,
+
+Here $\epsilon$ = Radius of points around the selected point and
+MinPts = Number of points required to form a cluster 
+
+#### Algorithm works as follow :- 
+1. Start by selection an unselected point and take $\epsilon$ and Minpts values 
+2. Check the surrounding of the selected point within the $\epsilon$ 
+3. If the number of points around the point is > Minpts ; Point becomes a cluster and if the MinPts is > No of points, the points are marked as outlier (temporarily)
+4. This process continues until some threshold value is hit or all points are gone through 
 ## Association Rule Mining 
 
 It is an unsupervised learning technique used to learn the shopping behavior or business behavior
@@ -44,6 +59,10 @@ It is an unsupervised learning technique used to learn the shopping behavior or 
 The rules that support both minimum support threshold and minimum confidence threshold are called strong association rules 
 
 ### Apriori Algorithm 
+
+Apriori algorithm is used to find frequent datasets and to create or find assosiation rules between them in large transactional database, mainly used for market basket analysis 
+“If a customer buys _bread_ and _butter_, they are likely to buy _jam_ too.”
+
 
 Support and Confidence 
 
@@ -59,6 +78,40 @@ $$
 $$
 \text{Confidence}(A \Rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)} = P(B|A)
 $$
+
+#### Algorithm 
+
+1. Identifying Frequent Item-Sets
+
+•The Apriori algorithm starts by looking through all the data to count how
+many times each single item appears. These single items are called 1-Item-
+Sets.
+•Next it uses a rule called minimum support this is a number that tells us
+how often an item or group of items needs to appear to be important. If an
+item appears often enough meaning its count is above this minimum
+support it is called a frequent Item-Set.
+
+2. Creating Possible Item Group
+
+•After finding the single items that appear often enough (frequent 1-item
+groups) the algorithm combines them to create pairs of items (2-item
+groups). Then it checks which pairs are frequent by seeing if they appear
+enough times in the data.
+•This process keeps going step by step making groups of 3 items, then 4
+items and so on. The algorithm stops when it can’t find any bigger groups
+that happen often enough.
+
+3. Removing Infrequent Item Groups
+
+•The Apriori algorithm uses a helpful rule to save time. This rule says: if a
+group of items does not appear often enough then any larger group that
+incl2 udes these items will also not appear often.
+•Because of this, the algorithm does not check those larger groups. This way
+it avoids wasting time looking at groups that won’t be important make the
+whole process faster.4. Generating Association Rules
+
+The algorithm makes rules to show how items are related.
+
 ### Corealation analysis 
 
 Correlation analysis is the study of strength and direction of linear relationship between two variables 
